@@ -1,68 +1,63 @@
-# Compilación general
-*.o
-*.obj
-*.lo
-*.la
-*.al
-*.out
-*.a
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
 *.so
-*.dll
-*.dylib
-*.exe
-*.app
-*.lib
 
-# Archivos de depuración y logs
-*.log
-*.tmp
-*.temp
-*.bak
-*.swp
-*.swo
-*.cache
-*.gch
-*.pch
-*.dSYM/
-*.stackdump
-
-# Directorios de build
+# Distribuciones
 build/
-Build/
-bin/
-Bin/
-obj/
-Obj/
-out/
-Out/
 dist/
-Debug/
-Release/
-CMakeFiles/
+*.egg-info/
+.eggs/
 
-# Archivos de CMake
-CMakeCache.txt
-cmake_install.cmake
-Makefile
-Makefile.in
-*.make
-*.ninja
-.ninja_deps
-.ninja_log
+# Virtual environments
+venv/
+env/
+ENV/
+.env/
+.venv/
 
-# Configuración de IDEs
+# IDEs y editores
 .vscode/
 .idea/
-*.code-workspace
+*.sublime-project
+*.sublime-workspace
 
-# Archivos generados por herramientas
-compile_commands.json
-*.depend
-*.deps
-*.idb
-*.pdb
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
 
-# Archivos del sistema
+# PyInstaller
+*.manifest
+*.spec
+
+# Logs y bases de datos
+*.log
+*.sqlite3
+
+# MacOS
 .DS_Store
-Thumbs.db
-desktop.ini
+
+# Linux
+*~
+
+# Coverage
+.coverage
+htmlcov/
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+
+# Pipenv
+Pipfile.lock
+
+# Poetry
+poetry.lock
+
+# mypy
+.mypy_cache/
+
+# pytest
+.pytest_cache/
