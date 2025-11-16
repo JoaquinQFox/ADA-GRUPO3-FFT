@@ -31,8 +31,16 @@ def medir_tiempos():
 
         tiempos_dft.append(tiempo_dft)
         
+        # Tiempos de FFT
+        inicio     = time.perf_counter()
+        fft(signal)
+        fin        = time.perf_counter()
+        tiempo_fft = fin - inicio
+
+        tiempos_fft.append(tiempo_fft)
+
         # Mostrar de prueba
-        print(f"N = {N:4d} | DFT = {tiempo_dft:.6f}s")
+        print(f"N = {N:4d} | DFT = {tiempo_dft:.6f}s | FFT = {tiempo_fft:.6f}s")
 
     return size, tiempos_dft, tiempos_fft
 
