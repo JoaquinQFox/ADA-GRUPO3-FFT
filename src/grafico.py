@@ -12,7 +12,7 @@ from fft import fft
 
 # función de prueba
 def generar_signal (N):
-    return []
+    return [math.sin(2 * math.pi * 3 + t / N) for t in range(N)]
 
 # Medición de tiempos
 def medir_tiempos():
