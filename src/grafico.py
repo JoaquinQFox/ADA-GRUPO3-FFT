@@ -16,7 +16,25 @@ def generar_signal (N):
 
 # Medición de tiempos
 def medir_tiempos():
-    return 0, 0, 0 # size, tiempos_dft, tiempos_fft
+    size        = [32, 64, 128, 256, 512, 1024, 2048, 4096]
+    tiempos_dft = []
+    tiempos_fft = []
+
+    for N in size:
+        signal = generar_signal(N)
+
+        # Tiempos de DFT
+        inicio     = time.perf_counter()
+        dft(signal)
+        fin        = time.perf_counter()
+        tiempo_dft = fin - inicio
+
+        tiempos_dft.append(tiempo_dft)
+        
+        # Mostrar de prueba
+        print(f"N = {N:4d} | DFT = {tiempo_dft:.6f}s")
+
+    return size, tiempos_dft, tiempos_fft
 
 # Main
 if __name__ == "__main__":
